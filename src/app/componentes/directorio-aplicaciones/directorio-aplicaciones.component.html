@@ -1,0 +1,40 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <mat-chip-list aria-label="area">
+    <mat-chip>Abastecimiento</mat-chip>
+    <mat-chip>CEDIS</mat-chip>
+    <mat-chip>Cadena logística</mat-chip>
+  </mat-chip-list>
+  <div>
+    <button mat-fab class="btn-gerencias" [matMenuTriggerFor]="menu" aria-label="Gerencias">
+      <mat-icon>domain</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Logistica</button>
+      <button mat-menu-item>Financiera</button>
+    </mat-menu>
+  </div>
+</div>
+
+<mat-tab-group>
+  <mat-tab label="aplicacion 1">
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side" position="end">
+        <app-cabecera-funcionalidad></app-cabecera-funcionalidad>
+      </mat-drawer>    
+      <div fxLayout="column">
+        <button  type="button" mat-button (click)="drawer.toggle()">
+          Toggle sidenav 1
+        </button>
+
+        <app-detalle-aplicacion fxFlex="100"></app-detalle-aplicacion>
+        <app-tabla-modulos fxFlex="100"></app-tabla-modulos>
+      </div>
+    
+    </mat-drawer-container>
+
+  </mat-tab>
+</mat-tab-group>
+
+
+
+

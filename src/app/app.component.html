@@ -1,0 +1,58 @@
+<ngx-spinner name="cargaInicial" bdOpacity=0.9 bdColor="#2d323d" size="medium" color="#3f74cd" type="ball-clip-rotate"
+    [fullScreen]="true">
+</ngx-spinner>
+
+<ngx-spinner name="cargaDatos" bdColor="rgba(45, 50, 61,0,0)" size="medium" color="#3f74cd" type="ball-clip-rotate"
+    [fullScreen]="true">
+</ngx-spinner>
+
+<div class="no-privileges" *ngIf="mostrarPantalla==false">
+    <h2 >Usted no tiene privilegios</h2>
+</div>
+
+<div *ngIf="mostrarPantalla==true">
+    <div>
+    <div _nghost-dho-c236="" class="ng-star-inserted theme-default">
+        <div _ngcontent-dho-c236="" class="page-layout carded fullwidth">
+            <div _ngcontent-dho-c236="" class="top-bg accent "></div>
+            <div _ngcontent-dho-c236="" class="center scroll-element" [ngClass]="!large ?  'scrollElementPhone': ''">
+                <div _ngcontent-dho-c236="" fxlayout="row" fxlayoutalign="start center" class="header p-24"
+                    style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center flex-start; align-items: center;">
+                    <div [style.display]="volver.boton ? 'block':'none'">
+                        <button (click)="volverRuta();" class="mr-16 mat-icon-button" mat-icon-button="" tabindex="0">
+                            <span class="mat-button-wrapper">
+                                <mat-icon
+                                    class="mat-icon notranslate ng-tns-c39-37 material-icons mat-icon-no-color colorBotonVolver"
+                                    role="img" aria-hidden="true">arrow_back</mat-icon>
+                            </span>
+                            <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                            <div class="mat-button-focus-overlay"></div>
+                        </button>
+                    </div>
+                    <h2 *ngIf="large" _ngcontent-dho-c236="" class="m-0 titulo-header">{{titulo}}</h2>
+                    <h2 *ngIf="!large" _ngcontent-dho-c236="" class="m-0 titulo-header-phone">{{titulo}}</h2>
+                </div>
+                <div _ngcontent-dho-c236="" class="content-card" [ngClass]="!large ?  'cardPhone': ''">
+                    <div _ngcontent-dho-c236="" class="content p-24 contentPhone" >
+                        <div _ngcontent-dho-c236="" _nghost-dho-c235="">
+                            <div _ngcontent-dho-c235="" class="demo-content line-height-1.75">
+                                <div id="container-1" class="container">
+                                    <div id="container-2" class="container">
+                                        <div id="container-3" class="container" fusePerfectScrollbar
+                                            [fusePerfectScrollbarOptions]="{suppressScrollX: true, updateOnRouteChange : true}">
+                                            <router-outlet>
+                                            </router-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

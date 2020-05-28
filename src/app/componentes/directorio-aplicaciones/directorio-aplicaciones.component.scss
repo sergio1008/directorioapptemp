@@ -1,0 +1,14 @@
+.example-container {
+    width: 100%;
+    min-height: 810px;
+    height: auto;
+}
+
+.example-sidenav {
+    padding: 20px;
+}
+
+::ng-deep body.theme-default .mat-drawer-container {
+    background-color: #ffff !important;
+    color: rgba(0, 0, 0, 0.87);
+}
